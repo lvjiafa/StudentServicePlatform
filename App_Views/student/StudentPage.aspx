@@ -65,6 +65,253 @@
     <div class="center">
         <div class="all-center">
             <div class="center-left">
+            <div class="student-info">
+                <br />
+                <asp:FormView ID="FormView1" runat="server" DataKeyNames="学号" 
+                    DataSourceID="SqlDataSource1">
+                    <EditItemTemplate>
+                        学号:
+                        <asp:Label ID="学号Label1" runat="server" Text='<%# Eval("学号") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        学号:
+                        <asp:TextBox ID="学号TextBox" runat="server" Text='<%# Bind("学号") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        学号:
+                        <asp:Label ID="学号Label" runat="server" Text='<%# Eval("学号") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView2" runat="server" DataSourceID="SqlDataSource2">
+                    <EditItemTemplate>
+                        姓名:
+                        <asp:TextBox ID="姓名TextBox" runat="server" Text='<%# Bind("姓名") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        姓名:
+                        <asp:TextBox ID="姓名TextBox" runat="server" Text='<%# Bind("姓名") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        姓名:
+                        <asp:Label ID="姓名Label" runat="server" Text='<%# Bind("姓名") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView3" runat="server" DataSourceID="SqlDataSource3">
+                    <EditItemTemplate>
+                        性别:
+                        <asp:TextBox ID="性别TextBox" runat="server" Text='<%# Bind("性别") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        性别:
+                        <asp:TextBox ID="性别TextBox" runat="server" Text='<%# Bind("性别") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        性别:
+                        <asp:Label ID="性别Label" runat="server" Text='<%# Bind("性别") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView4" runat="server" DataSourceID="SqlDataSource5">
+                    <EditItemTemplate>
+                        生源地:
+                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        生源地:
+                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        生源地:
+                        <asp:Label ID="生源地Label" runat="server" Text='<%# Bind("生源地") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView5" runat="server" DataSourceID="SqlDataSource5">
+                    <EditItemTemplate>
+                        生源地:
+                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        生源地:
+                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        生源地:
+                        <asp:Label ID="生源地Label" runat="server" Text='<%# Bind("生源地") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView6" runat="server" DataSourceID="SqlDataSource6">
+                    <EditItemTemplate>
+                        政治面貌:
+                        <asp:TextBox ID="政治面貌TextBox" runat="server" Text='<%# Bind("政治面貌") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        政治面貌:
+                        <asp:TextBox ID="政治面貌TextBox" runat="server" Text='<%# Bind("政治面貌") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        政治面貌:
+                        <asp:Label ID="政治面貌Label" runat="server" Text='<%# Bind("政治面貌") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView7" runat="server" DataSourceID="SqlDataSource7">
+                    <EditItemTemplate>
+                        是否住宿:
+                        <asp:CheckBox ID="是否住宿CheckBox" runat="server" Checked='<%# Bind("是否住宿") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        是否住宿:
+                        <asp:CheckBox ID="是否住宿CheckBox" runat="server" Checked='<%# Bind("是否住宿") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        是否住宿:
+                        <asp:CheckBox ID="是否住宿CheckBox" runat="server" Checked='<%# Bind("是否住宿") %>' 
+                            Enabled="false" />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView8" runat="server" DataSourceID="SqlDataSource8">
+                    <EditItemTemplate>
+                        宿舍电话:
+                        <asp:TextBox ID="宿舍电话TextBox" runat="server" Text='<%# Bind("宿舍电话") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        宿舍电话:
+                        <asp:TextBox ID="宿舍电话TextBox" runat="server" Text='<%# Bind("宿舍电话") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        宿舍电话:
+                        <asp:Label ID="宿舍电话Label" runat="server" Text='<%# Bind("宿舍电话") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <asp:FormView ID="FormView9" runat="server" DataSourceID="SqlDataSource9">
+                    <EditItemTemplate>
+                        照片:
+                        <asp:TextBox ID="照片TextBox" runat="server" Text='<%# Bind("照片") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        照片:
+                        <asp:TextBox ID="照片TextBox" runat="server" Text='<%# Bind("照片") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        照片:
+                        <asp:Label ID="照片Label" runat="server" Text='<%# Bind("照片") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+            </div>
             </div>
             <div class="center-right">
                 <span class="right-header">请先输入个人信息</span>
@@ -72,7 +319,105 @@
                 </span>
                 <span class="right-name">你的名字：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>
                 </span>
-                <span class="right-button"><asp:ImageButton ID="Tijao" runat="server" ImageUrl="~/App_Themes/images/student/Student_Tijiao.jpg" /></span>
+                <span class="right-button"><asp:ImageButton ID="Tijao" runat="server" ImageUrl="~/App_Themes/images/student/Student_Tijiao.jpg" />
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [学号] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [姓名] FROM [学生情况 查询] WHERE ([学号] = ?)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [性别] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [出生日期] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [生源地] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource6" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [政治面貌] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource7" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [是否住宿] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource8" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [宿舍电话] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource9" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [照片] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="姓名" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                </span>
              </div>
         </div>
     </div>

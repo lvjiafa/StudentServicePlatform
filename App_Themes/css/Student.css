@@ -48,4 +48,11 @@
     position:absolute;
     margin-top:350px;
     margin-left:170px;
+    top: 2px;
+    left: 4px;
+}
+.student-info
+{
+    position:absolute;
+    margin-left:40px;
     }

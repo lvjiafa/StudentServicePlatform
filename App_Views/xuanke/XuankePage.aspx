@@ -65,6 +65,123 @@
     <div class="center">
         <div class="all-center">
             <div class="center-left">
+                <div class="xuanke-info">
+                    <br />
+                    <br />
+                <asp:FormView ID="FormView1" runat="server" DataSourceID="SqlDataSource1">
+                    <EditItemTemplate>
+                        你的学号:
+                        <asp:TextBox ID="学号TextBox" runat="server" Text='<%# Bind("学号") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        你的学号:
+                        <asp:TextBox ID="学号TextBox" runat="server" Text='<%# Bind("学号") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        你的学号:
+                        <asp:Label ID="学号Label" runat="server" Text='<%# Bind("学号") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <br />
+                <br />
+                <asp:FormView ID="FormView2" runat="server" DataSourceID="SqlDataSource2">
+                    <EditItemTemplate>
+                        课程代号:
+                        <asp:TextBox ID="课程代号TextBox" runat="server" Text='<%# Bind("课程代号") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        课程代号:
+                        <asp:TextBox ID="课程代号TextBox" runat="server" Text='<%# Bind("课程代号") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        课程代号:
+                        <asp:Label ID="课程代号Label" runat="server" Text='<%# Bind("课程代号") %>' />
+                        <br />
+                    </ItemTemplate>
+                </asp:FormView>
+                    <br />
+                <br />
+                <br />
+                <asp:FormView ID="FormView3" runat="server" DataSourceID="SqlDataSource3">
+                    <EditItemTemplate>
+                        你的成绩:
+                        <asp:TextBox ID="成绩TextBox" runat="server" Text='<%# Bind("成绩") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        你的成绩:
+                        <asp:TextBox ID="成绩TextBox" runat="server" Text='<%# Bind("成绩") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        你的成绩:
+                        <asp:Label ID="成绩Label" runat="server" Text='<%# Bind("成绩") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:FormView ID="FormView4" runat="server" DataSourceID="SqlDataSource4">
+                    <EditItemTemplate>
+                        修课时间:
+                        <asp:TextBox ID="修课时间TextBox" runat="server" Text='<%# Bind("修课时间") %>' />
+                        <br />
+                        <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
+                            CommandName="Update" Text="更新" />
+                        &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        修课时间:
+                        <asp:TextBox ID="修课时间TextBox" runat="server" Text='<%# Bind("修课时间") %>' />
+                        <br />
+                        <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
+                            CommandName="Insert" Text="插入" />
+                        &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" 
+                            CausesValidation="False" CommandName="Cancel" Text="取消" />
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        修课时间:
+                        <asp:Label ID="修课时间Label" runat="server" Text='<%# Bind("修课时间") %>' />
+                        <br />
+
+                    </ItemTemplate>
+                </asp:FormView>
+                </div>
             </div>
             <div class="center-right">
                 <span class="right-header">请先输入选课信息</span>
@@ -72,7 +189,52 @@
                 </span>
                 <span class="right-name">课程代号：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>
                 </span>
-                <span class="right-button"><asp:ImageButton ID="Tijao" runat="server" ImageUrl="~/App_Themes/images/student/Student_Tijiao.jpg" /></span>
+                <span class="right-button"><asp:ImageButton ID="Tijao" runat="server" ImageUrl="~/App_Themes/images/student/Student_Tijiao.jpg" />
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [学号] FROM [选课及成绩 查询] WHERE (([学号] = ?) AND ([课程代号] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="课程代号" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [课程代号] FROM [选课及成绩 查询] WHERE (([学号] = ?) AND ([课程代号] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="课程代号" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [成绩] FROM [选课及成绩 查询] WHERE (([学号] = ?) AND ([课程代号] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="课程代号" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [修课时间] FROM [选课及成绩 查询] WHERE (([学号] = ?) AND ([课程代号] = ?))">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
+                            Type="String" />
+                        <asp:ControlParameter ControlID="TextBox2" Name="课程代号" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                </span>
              </div>
         </div>
     </div>

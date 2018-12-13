@@ -68,19 +68,29 @@
                 <img src="../../App_Themes/images/index/Index_Wyu.jpg" alt="wyu"/>
             </div>
             <div class="center-left">
-                <span class="left-xuanze">请选择课程代号：</span>
-                <span class="left-xiala">
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="250px" Height="30px">
+                
+                <asp:DropDownList ID="DropDownList1" runat="server" 
+                    DataSourceID="SqlDataSource1" DataTextField="课程代号" DataValueField="课程代号">
                 </asp:DropDownList>
-                </span>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [课程代号] FROM [课程档案]"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT [课程名称] FROM [课程档案] WHERE ([课程代号] = ?)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="DropDownList1" Name="课程代号" 
+                            PropertyName="SelectedValue" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                
             </div>
             <div class="center-right">
-                <span class="right-daihao">课程代号：</span>
-                <span class="right-name">课程名称：</span>
-                <span class="right-leibie">类别：</span>
-                <span class="right-kaohe">考核方式：</span>
-                <span class="right-xuefen">学分：</span>
-                <span class="right-beizhu">备注：</span>
+                
+                <asp:Label ID="Label1" runat="server" Text="Label" on></asp:Label>
+                
             </div>
         </div>
     </div>

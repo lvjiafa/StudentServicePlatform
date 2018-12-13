@@ -9,10 +9,25 @@
 .left
 {
     float:left;
-    position:absolute;
+    position:relative;
     width:300px;
     margin-left:1px;
+    overflow:hidden;
 }
+.left a
+{
+    color:#663333;
+    }
+.left a:hover
+{
+    color:#cccccc;
+    }
+.left span
+{
+    position:absolute;
+    margin-top:-50px;
+    margin-left:150px;
+    }
 .right
 {
     float:right;
@@ -27,15 +42,43 @@
     }     
 .top-left
 {
-    position:absolute;
+    position:relative;
     float:left;
     margin-left:1px;
+    }
+.top-left a
+{
+    color:#663333;
+    }
+.top-left a:hover
+{
+    color:#cccccc;
+    }
+.top-left span
+{
+    position:absolute;
+    margin-top:-40px;
+    margin-left:80px;
     }
 .top-right
 {
     position:absolute;
     float:right;
     margin-left:210px;
+    }
+.top-right a
+{
+    color:#663333;
+    }
+.top-right a:hover
+{
+    color:#cccccc;
+    }
+.top-right span
+{
+    position:absolute;
+    margin-top:-40px;
+    margin-left:180px;
     }
 .low
 {
@@ -48,13 +91,46 @@
     margin-top:195px;
     margin-left:5px;
     }
+.low-left a
+{
+    color:#663333;
+    }
+.low-left a:hover
+{
+    color:#cccccc;
+    }
+.low-left span
+{
+    position:absolute;
+    margin-top:-40px;
+    margin-left:150px;
+    }
 .low-right
 {
     position:absolute;
     margin-left:350px;
     margin-top:195px;
     }
+.low-right a
+{
+    color:#663333;
+    }
+.low-right a:hover
+{
+    color:#cccccc;
+    }
+.low-right span
+{
+    position:absolute;
+    margin-top:-50px;
+    margin-left:130px;
+    }
 .center
 {
     height:850px;
-    }   
+    } 
+/*教师档案页面*/
+.t-center
+{
+    height:550px;
+    }

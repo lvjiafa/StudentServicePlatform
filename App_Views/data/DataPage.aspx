@@ -74,23 +74,33 @@
             </div>
             <div class="piture">
                 <div class="left">
-                    <a href="TeacherData.aspx"><img src="../../App_Themes/images/data/DatatPage_09.jpg" alt=""/></a>
+                    <a href="TeacherData.aspx"><img src="../../App_Themes/images/data/DatatPage_09.jpg" alt=""/>
+                        <span>教师档案</span>
+                    </a>
                 </div>
                 <div class="right">
                     <div class="top">
                         <div class="top-left">
-                            <a href="AcademyData.aspx"><img src="../../App_Themes/images/data/DatatPage_10.jpg" alt=""/></a>
+                            <a href="AcademyData.aspx"><img src="../../App_Themes/images/data/DatatPage_10.jpg" alt=""/>
+                                <span>学院档案</span>
+                            </a>
                         </div>
                         <div class="top-right">
-                            <a href="StudentData.aspx"><img src="../../App_Themes/images/data/DatatPage_11.jpg" alt=""/></a>
+                            <a href="StudentData.aspx"><img src="../../App_Themes/images/data/DatatPage_11.jpg" alt=""/>
+                                <span>学生档案</span>
+                            </a>
                         </div>
                     </div>
                     <div class="low">
                         <div class="low-left">
-                            <a href="CourseData.aspx"><img src="../../App_Themes/images/data/DatatPage_14.jpg" alt=""/></a>
+                            <a href="CourseData.aspx"><img src="../../App_Themes/images/data/DatatPage_14.jpg" alt=""/>
+                                <span>课程档案</span>
+                            </a>
                         </div>
                         <div class="low-right">
-                            <a href="GradeData.aspx"><img src="../../App_Themes/images/data/DatatPage_16.jpg" alt=""/></a>
+                            <a href="GradeData.aspx"><img src="../../App_Themes/images/data/DatatPage_16.jpg" alt=""/>
+                                <span>成绩档案</span>
+                            </a>
                         </div>
                     </div>
                 </div>
