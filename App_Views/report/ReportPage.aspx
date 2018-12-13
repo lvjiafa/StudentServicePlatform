@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>报表打印</title>
-    <link href="../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <div class="header">
@@ -30,7 +30,7 @@
                 <div class="all-center">
                     <h1>
                         <a href="IndexPage.htm"></a>
-                        <img src="../App_Themes/images/index/Index_Asp.jpg" width="960px" height="120px" alt="Web程序设计"/>
+                        <img src="../../App_Themes/images/index/Index_Asp.jpg" width="960px" height="120px" alt="Web程序设计"/>
                     </h1>
                 </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="all-center">
             <ul>
                 <li class="a">
-                    <span><a href="IndexPage.htm">网站首页</a></span> 
+                    <span><a href="../IndexPage.htm">网站首页</a></span> 
                 </li>
                 <li>
                     <a href="https://baike.baidu.com/item/Web%20%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1" target="_blank">课程简介</a>
