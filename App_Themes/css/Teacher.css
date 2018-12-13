@@ -1,0 +1,51 @@
+﻿body {
+}
+.center
+{
+    height:720px;
+    }
+.center-left
+{
+    margin-top:68px;
+    width:450px;
+    height:500px;
+    float:left;
+    position:relative;
+    border:1px solid darkred;
+    }
+.center-right
+{
+    margin-top:68px;
+    width:450px;
+    height:500px;
+    float:right;
+    position:relative;
+    border:1px solid darkred;
+    }
+.right-header
+{
+    position:absolute;
+    margin-top:40px;
+    margin-left:120px;
+    font-size:24px;
+    }
+.right-nuber
+{
+    position:absolute;
+    margin-top:150px;
+    margin-left:50px;
+    font-size:22px;
+}
+.right-name
+{
+    position:absolute;
+    margin-top:250px;
+    margin-left:50px;
+    font-size:22px;
+}
+.right-button
+{
+    position:absolute;
+    margin-top:350px;
+    margin-left:170px;
+    }

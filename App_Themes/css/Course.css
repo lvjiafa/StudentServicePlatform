@@ -1,0 +1,81 @@
+﻿body {
+}
+.center
+{
+    height:960px;
+    }
+.center-left
+{
+    margin-top:2px;
+    background-color:#cccccc;
+    width:300px;
+    height:350px;
+    position:relative;
+    float:left;
+    }
+.left-xuanze
+{
+    position:absolute;
+    margin-top:20px;
+    margin-left:27px;
+    font-size:22px;
+    }
+.left-xiala
+{
+    position:absolute;
+    margin-top:50px;
+    margin-left:25px;
+    font-size:22px;
+    }
+.right-daihao
+{
+    position:absolute;
+    margin-top:20px;
+    margin-left:25px;
+    font-size:22px;
+    }
+    .right-name
+{
+    position:absolute;
+    margin-top:110px;
+    margin-left:25px;
+    font-size:22px;
+    }
+    .right-leibie
+{
+    position:absolute;
+    margin-top:200px;
+    margin-left:25px;
+    font-size:22px;
+    }
+    .right-kaohe
+{
+    position:absolute;
+    margin-top:290px;
+    margin-left:25px;
+    font-size:22px;
+    }
+    .right-xuefen
+{
+    position:absolute;
+    margin-top:380px;
+    margin-left:25px;
+    font-size:22px;
+    }
+    .right-beizhu
+{
+    position:absolute;
+    margin-top:470px;
+    margin-left:25px;
+    font-size:22px;
+    }
+.center-right
+{
+    margin-top:2px;
+    margin-left:3px;
+    background-color:#cccccc;
+    width:650px;
+    height:600px;
+    position:relative;
+    float:right;
+    }

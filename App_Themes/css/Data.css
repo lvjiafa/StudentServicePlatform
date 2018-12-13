@@ -1,0 +1,60 @@
+﻿body {
+}
+.piture
+{
+    position:relative;
+    height:300px;
+    margin-top:3px;
+    }
+.left
+{
+    float:left;
+    position:absolute;
+    width:300px;
+    margin-left:1px;
+}
+.right
+{
+    float:right;
+    position:relative;
+    margin-right:0;
+    width:658px;
+    }
+.top
+{
+    position:relative;
+    margin-top:0
+    }     
+.top-left
+{
+    position:absolute;
+    float:left;
+    margin-left:1px;
+    }
+.top-right
+{
+    position:absolute;
+    float:right;
+    margin-left:210px;
+    }
+.low
+{
+    position:relative;
+    margin-bottom:0
+    } 
+.low-left
+{
+    position:absolute;
+    margin-top:195px;
+    margin-left:5px;
+    }
+.low-right
+{
+    position:absolute;
+    margin-left:350px;
+    margin-top:195px;
+    }
+.center
+{
+    height:850px;
+    }   
