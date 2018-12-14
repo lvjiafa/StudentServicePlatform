@@ -11,4 +11,8 @@ public partial class App_Views_Course : System.Web.UI.Page
     {
         
     }
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        
+    }
 }
