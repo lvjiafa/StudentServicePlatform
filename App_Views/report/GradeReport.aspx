@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>学生成绩报表</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -62,6 +62,26 @@
         </div>
         </div>
     </div>
+    <center>
+            <div class="gr_h">
+                <div class="center">
+                    <span class="gr_number">
+                        学生学号：<asp:TextBox ID="TextBox1" runat="server" Height="30px"></asp:TextBox>
+                    </span>
+                    <span class="gr_name">
+                        课程代号：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>
+                    </span>
+                    <span class="bt_b">
+                        <asp:ImageButton ID="back" ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" 
+                        PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
+                    </span>
+                    <span class="bt_s">
+                        <asp:ImageButton ID="sure" ImageUrl="~/App_Themes/images/report/ReportPage2_05.jpg"
+                        PostBackUrl="~/App_Views/report/PersonReport2.aspx" runat="server" Height="30px" Width="80px"/>
+                    </span>
+                </div>
+            </div>
+        </center>
     <div class="footer">
         <div class="all-center">
             <span>

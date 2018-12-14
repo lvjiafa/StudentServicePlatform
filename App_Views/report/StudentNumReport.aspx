@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>生源人数报表</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -62,6 +62,20 @@
         </div>
         </div>
     </div>
+    <center>
+        <div class="p_h">
+            <div class="all-center">
+                <span class="bt_q">
+                    <asp:ImageButton ID="bt_q" ImageUrl="~/App_Themes/images/report/ReportPage3_03.jpg"
+                            PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
+                </span>
+                 <span class="bt_f">
+                    <asp:ImageButton ID="bt_f" ImageUrl="~/App_Themes/images/report/ReportPage3_05.jpg"
+                            PostBackUrl="" runat="server" Height="30px" Width="80px"/>
+                </span>
+            </div>
+        </div>
+    </center>
     <div class="footer">
         <div class="all-center">
             <span>
