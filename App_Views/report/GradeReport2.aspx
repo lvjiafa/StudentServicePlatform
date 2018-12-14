@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>课程成绩报表</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -76,6 +76,14 @@
             </div>
         </div>
     </center>
+    <div class="footer">
+        <div class="all-center">
+            <span>
+            </span>
+            <span>
+            </span>
+        </div>
+    </div>
     </form>
 </body>
 </html>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentReport.aspx.cs" Inherits="App_Views_report_StudentReport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentReport2.aspx.cs" Inherits="App_Views_report_StudentReport2" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -63,25 +63,19 @@
         </div>
     </div>
     <center>
-            <div class="gr_h">
-                <div class="center">
-                    <span class="gr_number">
-                        学生学号：<asp:TextBox ID="TextBox1" runat="server" Height="30px"></asp:TextBox>
-                    </span>
-                    <span class="gr_name">
-                        学生姓名：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>
-                    </span>
-                    <span class="bt_b">
-                        <asp:ImageButton ID="back" ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" 
-                        PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
-                    </span>
-                    <span class="bt_s">
-                        <asp:ImageButton ID="sure" ImageUrl="~/App_Themes/images/report/ReportPage2_05.jpg"
-                        PostBackUrl="~/App_Views/report/StudentReport2.aspx" runat="server" Height="30px" Width="80px"/>
-                    </span>
-                </div>
+        <div class="p_h">
+            <div class="all-center">
+                <span class="bt_q">
+                    <asp:ImageButton ID="bt_q" ImageUrl="~/App_Themes/images/report/ReportPage3_03.jpg"
+                            PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
+                </span>
+                 <span class="bt_f">
+                    <asp:ImageButton ID="bt_f" ImageUrl="~/App_Themes/images/report/ReportPage3_05.jpg"
+                            PostBackUrl="" runat="server" Height="30px" Width="80px"/>
+                </span>
             </div>
-        </center>
+        </div>
+    </center>
     <div class="footer">
         <div class="all-center">
             <span>

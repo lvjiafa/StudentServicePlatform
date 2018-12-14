@@ -30,7 +30,7 @@
             <div class="mian-pitrue">
                 <div class="all-center">
                     <h1>
-                        <a href="IndexPage.htm"></a>
+                        <a href="../IndexPage.htm"></a>
                         <img src="../../App_Themes/images/index/Index_Asp.jpg" width="960px" height="120px" alt="Web程序设计"/>
                     </h1>
                 </div>

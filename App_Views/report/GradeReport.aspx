@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>学生成绩报表</title>
+    <title>课程成绩报表</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -77,7 +77,7 @@
                     </span>
                     <span class="bt_s">
                         <asp:ImageButton ID="sure" ImageUrl="~/App_Themes/images/report/ReportPage2_05.jpg"
-                        PostBackUrl="~/App_Views/report/PersonReport2.aspx" runat="server" Height="30px" Width="80px"/>
+                        PostBackUrl="~/App_Views/report/GradeReport2.aspx" runat="server" Height="30px" Width="80px"/>
                     </span>
                 </div>
             </div>
