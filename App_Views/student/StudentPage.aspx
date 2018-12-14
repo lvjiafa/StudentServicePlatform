@@ -68,7 +68,7 @@
             <div class="student-info">
                 <br />
                 <asp:FormView ID="FormView1" runat="server" DataKeyNames="学号" 
-                    DataSourceID="SqlDataSource1">
+                    DataSourceID="SqlDataSource1" >
                     <EditItemTemplate>
                         学号:
                         <asp:Label ID="学号Label1" runat="server" Text='<%# Eval("学号") %>' />
@@ -306,7 +306,7 @@
                     </InsertItemTemplate>
                     <ItemTemplate>
                         照片:
-                        <asp:Label ID="照片Label" runat="server" Text='<%# Bind("照片") %>' />
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("照片") %>' Height="100px" Width="100px" />
                         <br />
 
                     </ItemTemplate>
