@@ -1,0 +1,154 @@
+﻿body {
+}
+.center-height
+{
+    height:500px;
+    }
+.font-stye
+{
+    font-size:large;
+    color:darkred;
+    }
+.gr_r
+{
+    position:relative;
+    float:left;
+    }
+.gr_r a
+{
+    color:#663333;
+    }
+.gr_r a:hover
+{
+    color:#cccccc;
+    }
+.gr_r span
+{
+    position:absolute;
+    margin-top:-50px;
+    margin-left:80px;
+    }
+.kc_r
+{
+    position:relative;
+    float:left;
+    }
+.kc_r a
+{
+    color:#663333;
+    }
+.kc_r a:hover
+{
+    color:#cccccc;
+    }
+.kc_r span
+{
+    position:absolute;
+    margin-top:-50px;
+    margin-left:60px;
+    }
+.xs_r
+{
+    position:relative;
+    float:left;
+    }
+.xs_r a
+{
+    color:#663333;
+    }
+.xs_r a:hover
+{
+    color:#cccccc;
+    }
+.xs_r span
+{
+    position:absolute;
+    margin-top:-50px;
+    margin-left:30px;
+    }
+.sy_r
+{
+    position:relative;
+    float:left;
+    margin-right:0;
+    }
+.sy_r a
+{
+    color:#663333;
+    }
+.sy_r a:hover
+{
+    color:#cccccc;
+    }
+.sy_r span
+{
+    position:absolute;
+    margin-top:-50px;
+    margin-left:100px;
+    }
+/*个人成绩报表*/
+.gr_h
+{
+    height:500px;
+    }
+.center
+{
+    margin-top:68px;
+    width:300px;
+    height:300px;
+    position:relative;
+    border:1px solid darkred;
+    }
+.gr_number
+{
+    position:absolute;
+    margin-top:50px;
+    padding:0;
+    top: 9px;
+    left: 20px;
+    font-size:large;
+}
+.gr_name
+{
+    position:absolute;
+    margin-top:120px;
+    padding:0;
+    top: 6px;
+    left: 20px;
+    height: 30px;
+    font-size:large;
+}
+.bt_b
+{
+    position:absolute;
+    margin-top:200px;
+    padding:0;
+    top: 6px;
+    left: 20px;
+    }
+.bt_s
+{
+    position:absolute;
+    margin-top:200px;
+    padding:0;
+    top: 6px;
+    left: 190px;
+    }
+/*确认打印*/
+.p_h
+{
+    position:relative;
+    height:500px;
+    }
+.bt_q
+{
+    position:absolute;
+    margin-top:400px;
+    left:400px;
+    }
+.bt_f
+{
+    position:absolute;
+    margin-top:400px;
+    right:400px;
+    }

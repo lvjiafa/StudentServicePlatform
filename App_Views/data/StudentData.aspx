@@ -74,7 +74,8 @@
                 ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                 SelectCommand="SELECT * FROM [学生情况]" 
                 
-                UpdateCommand="UPDATE [学生情况] SET [姓名] = ?, [性别] = ?, [出生日期] = ?, [生源地] = ?, [院系代号] = ?, [政治面貌] = ?, [是否住宿] = ?, [宿舍电话] = ?, [照片] = ? WHERE (([学号] = ?) OR ([学号] IS NULL AND ? IS NULL))">
+                
+                UpdateCommand="UPDATE 学生情况 SET 姓名 = ?, 性别 = ?, 出生日期 = ?, 生源地 = ?, 院系代号 = ?, 政治面貌 = ?, 是否住宿 = ?, 宿舍电话 = ?, 照片 = ? WHERE (学号 = ?)">
                 <DeleteParameters>
                     <asp:Parameter Name="学号" Type="String" />
                 </DeleteParameters>

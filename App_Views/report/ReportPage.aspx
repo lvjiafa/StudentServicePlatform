@@ -6,6 +6,7 @@
 <head runat="server">
     <title>报表打印</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <div class="header">
@@ -60,7 +61,45 @@
         </div>
         </div>
     </div>
-    <div></div>
+    <div class="all-center">
+        <div>
+            <img src="../../App_Themes/images/index/Index_Wyu.jpg" alt="wyu"/>
+        </div>
+        <div class="center-lizi">
+            <img src="../../App_Themes/images/report/ReportPage_03.jpg" alt="Course Eaxmple"/>       
+        </div>
+        <div class="center-height">
+            <div class="font-stye">
+                <center>
+                    <br /><p>请选择你需要打印的报表类型</p><br /><br />
+                </center>
+            </div>
+            <div class="gr_r">
+                <a href="PersonReport.aspx">
+                    <img src="../../App_Themes/images/report/ReportPage_06.jpg" alt="" />
+                    <span>个人成绩报表</span>
+                </a>
+            </div>
+            <div class="kc_r">
+                <a href="GradeReport.aspx">
+                    <img src="../../App_Themes/images/report/ReportPage_07.jpg" alt=""/>
+                    <span>课程成绩报表</span>
+                </a>
+            </div>
+            <div class="xs_r">
+                <a href="StudentReport.aspx">
+                    <img src="../../App_Themes/images/report/ReportPage_08.jpg" alt=""/>
+                    <span>学生情况报表</span>
+                </a>
+            </div>
+            <div class="sy_r">
+                <a href="StudentNumReport.aspx">
+                    <img src="../../App_Themes/images/report/ReportPage_09.jpg" alt="" width="297px" />
+                    <span>生源人数报表</span>
+                </a>
+            </div>   
+        </div>
+    </div>
     <div class="footer">
         <div class="all-center">
             <span>

@@ -73,7 +73,8 @@
                 InsertCommand="INSERT INTO [教师情况] ([教师编号], [姓名], [性别], [职称], [院系代号]) VALUES (?, ?, ?, ?, ?)" 
                 ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                 SelectCommand="SELECT * FROM 教师情况" 
-                UpdateCommand="UPDATE [教师情况] SET [姓名] = ?, [性别] = ?, [职称] = ?, [院系代号] = ? WHERE (([教师编号] = ?) OR ([教师编号] IS NULL AND ? IS NULL))">
+                
+                UpdateCommand="UPDATE 教师情况 SET 姓名 = ?, 性别 = ?, 职称 = ?, 院系代号 = ? WHERE (教师编号 = ?)">
                 <DeleteParameters>
                     <asp:Parameter Name="教师编号" Type="String" />
                 </DeleteParameters>

@@ -75,7 +75,7 @@
                 SelectCommand="SELECT * FROM [系别]" 
                 
                 
-                UpdateCommand="UPDATE [系别] SET [院系名称] = ?, [备注] = ? WHERE (([院系代号] = ?) OR ([院系代号] IS NULL AND ? IS NULL))">
+                UpdateCommand="UPDATE 系别 SET 院系名称 = ?, 备注 = ? WHERE (院系代号 = ?)">
                 <DeleteParameters>
                     <asp:Parameter Name="院系代号" Type="String" />
                 </DeleteParameters>
