@@ -126,9 +126,15 @@
                 <span class="right-header">请先选择课程信息</span>
                 <span class="right-nuber">
                     课程名称：
+<<<<<<< HEAD
                     <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" AppendDataBoundItems="True"
                     DataSourceID="SqlDataSource1" DataTextField="课程名称" DataValueField="课程名称">
                         <asp:ListItem>-请选择-</asp:ListItem>
+=======
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" 
+                    DataSourceID="SqlDataSource1" DataTextField="课程名称" DataValueField="课程名称">
+                        <asp:ListItem>--请选择--</asp:ListItem>
+>>>>>>> 53d053fd94bb0a9816c1a8cc0598763f0ff849e3
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
