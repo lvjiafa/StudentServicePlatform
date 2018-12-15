@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentReport2.aspx.cs" Inherits="App_Views_report_StudentReport2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentReport2.aspx.cs" Inherits="App_Views_report_StudentReport2" EnableEventValidation = "false"  %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -71,8 +71,48 @@
                 </span>
                  <span class="bt_f">
                     <asp:ImageButton ID="bt_f" ImageUrl="~/App_Themes/images/report/ReportPage3_05.jpg"
-                            PostBackUrl="" runat="server" Height="30px" Width="80px"/>
+                            PostBackUrl="" runat="server" Height="30px" Width="80px" 
+                    onclick="bt_f_Click"/>
                 </span>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                    DataKeyNames="学号" DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:BoundField DataField="学号" HeaderText="学号" ReadOnly="True" 
+                            SortExpression="学号" />
+                        <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />
+                        <asp:BoundField DataField="性别" HeaderText="性别" SortExpression="性别" />
+                        <asp:BoundField DataField="出生日期" HeaderText="出生日期" SortExpression="出生日期" />
+                        <asp:BoundField DataField="生源地" HeaderText="生源地" SortExpression="生源地" />
+                        <asp:BoundField DataField="政治面貌" HeaderText="政治面貌" SortExpression="政治面貌" />
+                        <asp:CheckBoxField DataField="是否住宿" HeaderText="是否住宿" SortExpression="是否住宿" />
+                        <asp:BoundField DataField="宿舍电话" HeaderText="宿舍电话" SortExpression="宿舍电话" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT * FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    <SelectParameters>
+                        <asp:QueryStringParameter Name="学号" QueryStringField="学号" Type="String" />
+                        <asp:QueryStringParameter Name="姓名" QueryStringField="姓名" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
     </center>
