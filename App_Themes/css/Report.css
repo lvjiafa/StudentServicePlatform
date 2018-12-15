@@ -145,10 +145,14 @@
     position:absolute;
     margin-top:400px;
     left:400px;
-    }
+    top: -37px;
+    height: 69px;
+}
 .bt_f
 {
     position:absolute;
     margin-top:400px;
     right:400px;
-    }
+    top: -44px;
+    height: 76px;
+}
