@@ -149,10 +149,10 @@
                     </ItemTemplate>
                 </asp:FormView>
                 <br />
-                <asp:FormView ID="FormView4" runat="server" DataSourceID="SqlDataSource5">
+                <asp:FormView ID="FormView4" runat="server" DataSourceID="SqlDataSource4">
                     <EditItemTemplate>
-                        生源地:
-                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        出生日期:
+                        <asp:TextBox ID="出生日期TextBox" runat="server" Text='<%# Bind("出生日期") %>' />
                         <br />
                         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
                             CommandName="Update" Text="更新" />
@@ -160,8 +160,8 @@
                             CausesValidation="False" CommandName="Cancel" Text="取消" />
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        生源地:
-                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        出生日期:
+                        <asp:TextBox ID="出生日期TextBox" runat="server" Text='<%# Bind("出生日期") %>' />
                         <br />
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
                             CommandName="Insert" Text="插入" />
@@ -169,8 +169,8 @@
                             CausesValidation="False" CommandName="Cancel" Text="取消" />
                     </InsertItemTemplate>
                     <ItemTemplate>
-                        生源地:
-                        <asp:Label ID="生源地Label" runat="server" Text='<%# Bind("生源地") %>' />
+                        出生日期:
+                        <asp:Label ID="出生日期Label" runat="server" Text='<%# Bind("出生日期") %>' />
                         <br />
 
                     </ItemTemplate>
@@ -178,8 +178,8 @@
                 <br />
                 <asp:FormView ID="FormView5" runat="server" DataSourceID="SqlDataSource5">
                     <EditItemTemplate>
-                        生源地:
-                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        院系名称:
+                        <asp:TextBox ID="院系名称TextBox" runat="server" Text='<%# Bind("院系名称") %>' />
                         <br />
                         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
                             CommandName="Update" Text="更新" />
@@ -187,8 +187,8 @@
                             CausesValidation="False" CommandName="Cancel" Text="取消" />
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        生源地:
-                        <asp:TextBox ID="生源地TextBox" runat="server" Text='<%# Bind("生源地") %>' />
+                        院系名称:
+                        <asp:TextBox ID="院系名称TextBox" runat="server" Text='<%# Bind("院系名称") %>' />
                         <br />
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
                             CommandName="Insert" Text="插入" />
@@ -196,8 +196,8 @@
                             CausesValidation="False" CommandName="Cancel" Text="取消" />
                     </InsertItemTemplate>
                     <ItemTemplate>
-                        生源地:
-                        <asp:Label ID="生源地Label" runat="server" Text='<%# Bind("生源地") %>' />
+                        院系名称:
+                        <asp:Label ID="院系名称Label" runat="server" Text='<%# Bind("院系名称") %>' />
                         <br />
 
                     </ItemTemplate>
@@ -365,7 +365,8 @@
                 <asp:SqlDataSource ID="SqlDataSource5" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    SelectCommand="SELECT [生源地] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    
+                    SelectCommand="SELECT 系别.院系名称 FROM (学生情况 INNER JOIN 系别 ON 学生情况.院系代号 = 系别.院系代号) WHERE (学生情况.学号 = ?) AND (学生情况.姓名 = ?)">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
                             Type="String" />

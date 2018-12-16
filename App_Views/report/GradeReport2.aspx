@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GradeReport2.aspx.cs" Inherits="App_Views_report_GradeReport2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GradeReport2.aspx.cs" Inherits="App_Views_report_GradeReport2" EnableEventValidation = "false"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -71,8 +71,44 @@
                 </span>
                  <span class="bt_f">
                     <asp:ImageButton ID="bt_f" ImageUrl="~/App_Themes/images/report/ReportPage3_05.jpg"
-                            PostBackUrl="" runat="server" Height="30px" Width="80px"/>
+                            PostBackUrl="" runat="server" Height="30px" Width="80px" 
+                    onclick="bt_f_Click"/>
                 </span>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                    DataKeyNames="学号,课程代号" DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:BoundField DataField="学号" HeaderText="学号" ReadOnly="True" 
+                            SortExpression="学号" />
+                        <asp:BoundField DataField="课程代号" HeaderText="课程代号" ReadOnly="True" 
+                            SortExpression="课程代号" />
+                        <asp:BoundField DataField="成绩" HeaderText="成绩" SortExpression="成绩" />
+                        <asp:BoundField DataField="修课时间" HeaderText="修课时间" SortExpression="修课时间" />
+                        <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
+                    </Columns>
+                </asp:GridView>
+                <br />
+                <br />
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT * FROM [选课及成绩] WHERE (([学号] = ?) AND ([课程代号] = ?))">
+                    <SelectParameters>
+                        <asp:QueryStringParameter Name="学号" QueryStringField="学号" Type="String" />
+                        <asp:QueryStringParameter Name="课程代号" QueryStringField="课程代号" Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
     </center>
