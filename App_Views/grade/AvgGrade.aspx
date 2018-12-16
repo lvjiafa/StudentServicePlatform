@@ -1,9 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="AvgGrade.aspx.vb" Inherits="App_Views_grade_AvgGrade" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AvgGrade.aspx.cs" Inherits="App_Views_grade_AvgGrade" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>各科目平均成绩</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Student.css" rel="Stylesheet" type="text/css" />

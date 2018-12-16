@@ -1,12 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="BirthInTime.aspx.vb" Inherits="App_Views_info_BirthInTime" %>
-
-<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
-    Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BirthInTime.aspx.cs" Inherits="App_Views_info_BirthInTime" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>某期间出生人数</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Student.css" rel="Stylesheet" type="text/css" />
@@ -110,6 +107,8 @@
             </div>
         </div>
     </div>
+    <div>
+    </div>
     <div class="footer">
         <div class="all-center">
             <span>
@@ -118,7 +117,9 @@
             </span>
         </div>
     </div>
-    
     </form>
 </body>
 </html>
+
+
+

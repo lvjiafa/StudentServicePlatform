@@ -1,9 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="SexStatistics.aspx.vb" Inherits="App_Views_info_SexStatistics" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SexStatistics.aspx.cs" Inherits="App_Views_info_SexStatistics" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>院系按性别统计</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Student.css" rel="Stylesheet" type="text/css" />

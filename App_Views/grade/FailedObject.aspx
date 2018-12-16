@@ -60,10 +60,7 @@
                 </li>
             </ul>
             </div>
-        </div>
-        <div class="center">
-        
-            
+        </div>       
         <div class="center">
             <div class="all-center">
                 <div class="center-left">

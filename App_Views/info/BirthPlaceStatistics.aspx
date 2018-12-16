@@ -1,9 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="BirthPlaceStatistics.aspx.vb" Inherits="App_Views_info_BirthPlaceStatistics" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BirthPlaceStatistics.aspx.cs" Inherits="App_Views_info_BirthPlaceStatistics" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <title>生源地人数统计</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Xuanke.css" type="text/css" rel="Stylesheet"/>
@@ -85,3 +85,5 @@
     </form>
 </body>
 </html>
+
+
