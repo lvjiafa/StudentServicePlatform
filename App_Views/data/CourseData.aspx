@@ -99,7 +99,7 @@
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
                 AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
                 DataKeyNames="课程代号" DataSourceID="SqlDataSource1" ForeColor="#333333" 
-                GridLines="None" Width="548px" Font-Size="Large" Height="371px">
+                GridLines="None" Width="548px" Font-Size="Large">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />

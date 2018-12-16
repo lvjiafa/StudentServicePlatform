@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>教师档案</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Data.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -94,9 +94,9 @@
                 </UpdateParameters>
             </asp:SqlDataSource>
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
-                AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
+                AllowSorting="True" AutoGenerateColumns="false" CellPadding="4" 
                 DataKeyNames="教师编号" DataSourceID="SqlDataSource1" ForeColor="#333333" 
-                GridLines="None" Width="548px" Font-Size="Large" Height="371px">
+                GridLines="None" Width="548px" Font-Size="Large">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -108,7 +108,7 @@
                     <asp:BoundField DataField="院系代号" HeaderText="院系代号" SortExpression="院系代号" />
                 </Columns>
                 <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" Width="10%" Height="10%"/>
                 <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
                 <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
                 <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
