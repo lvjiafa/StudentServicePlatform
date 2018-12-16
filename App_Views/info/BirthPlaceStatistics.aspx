@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PersonReport.aspx.cs" Inherits="App_Views_report_PersonReport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BirthPlaceStatistics.aspx.cs" Inherits="App_Views_info_BirthPlaceStatistics" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>个人成绩报表</title>
+<head id="Head1" runat="server">
+    <title>生源地人数统计</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
-    <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Xuanke.css" type="text/css" rel="Stylesheet"/>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="header">
+    <div class="header">
         <div class="header-top">
             <div class="all-center">
                 <div class="header-top-left">
@@ -62,34 +62,28 @@
         </div>
         </div>
     </div>
-        <center>
-            <div class="gr_h">
-                <div class="center">
-                    <span class="gr_number">
-                        你的学号：<asp:TextBox ID="TextBox1" runat="server" Height="30px"></asp:TextBox>
-                    </span>
-                    <span class="gr_name">
-                        你的姓名：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>
-                    </span>
-                    <span class="bt_b">
-                        <asp:ImageButton ID="back" ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" 
-                        PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
-                    </span>
-                    <span class="bt_s">
-                        <asp:ImageButton ID="sure" ImageUrl="~/App_Themes/images/report/ReportPage2_05.jpg"
-                         runat="server" Height="30px" Width="80px" onclick="sure_Click"/>
-                    </span>
-                </div>
-            </div>
-        </center>
-        <div class="footer">
+    <div class="center">
         <div class="all-center">
-            <span>
-            </span>
-            <span>
-            </span>
+            <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1" 
+                EnableViewState="True">
+                <Series>
+                    <asp:Series Name="Series1" ChartType="StackedColumn" XValueMember="生源地" 
+                        YValueMembers="人数">
+                    </asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1">
+                    </asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                SelectCommand="SELECT * FROM [生源地人数统计]"></asp:SqlDataSource>
         </div>
-    </div>    
+    </div>
     </form>
 </body>
 </html>
+
+

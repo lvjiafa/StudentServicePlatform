@@ -77,7 +77,8 @@
                     </span>
                     <span class="bt_s">
                         <asp:ImageButton ID="sure" ImageUrl="~/App_Themes/images/report/ReportPage2_05.jpg"
-                        PostBackUrl="~/App_Views/report/StudentReport2.aspx" runat="server" Height="30px" Width="80px"/>
+                         runat="server" 
+                        Height="30px" Width="80px" onclick="sure_Click"/>
                     </span>
                 </div>
             </div>

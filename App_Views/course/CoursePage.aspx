@@ -68,10 +68,11 @@
                 <img src="../../App_Themes/images/index/Index_Wyu.jpg" alt="wyu"/>
             </div>
             <div class="center-left">
-                <asp:DropDownList ID="DropDownList1" runat="server" 
+                <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True"
                     DataSourceID="SqlDataSource1" DataTextField="课程代号" DataValueField="课程代号" 
                     onselectedindexchanged="DropDownList1_SelectedIndexChanged" 
                     AutoPostBack="True">
+                    <asp:ListItem>-请选择-</asp:ListItem>
                 </asp:DropDownList>
 
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
