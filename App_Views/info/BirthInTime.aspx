@@ -64,47 +64,55 @@
     </div>
     <div class="center">
         <div class="all-center">
-            <div class="center-left">
-                <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource3">
+            <center>
+                <br /><br />
+                请选择出生时间段：<br /><br /><br />
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" AppendDataBoundItems="true"
+                    DataSourceID="SqlDataSource1" DataTextField="出生日期" DataValueField="出生日期">
+                </asp:DropDownList>
+                &nbsp;&nbsp;&nbsp; 至 &nbsp;&nbsp;&nbsp;
+                <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="true" AppendDataBoundItems="true"
+                    DataSourceID="SqlDataSource2" DataTextField="出生日期" DataValueField="出生日期">
+                </asp:DropDownList>
+                <br /><br /><br />
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                    DataKeyNames="学号" DataSourceID="SqlDataSource3">
+                    <Columns>
+                        <asp:BoundField DataField="学号" HeaderText="学号" ReadOnly="True" 
+                            SortExpression="学号" />
+                        <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />
+                        <asp:BoundField DataField="性别" HeaderText="性别" SortExpression="性别" />
+                        <asp:BoundField DataField="出生日期" HeaderText="出生日期" SortExpression="出生日期" />
+                    </Columns>
                 </asp:GridView>
-            </div>
-            <div class="center-right">
-                <span class="right-nuber">
-                    <asp:DropDownList ID="DropDownList1" runat="server" 
-                    AppendDataBoundItems="True">
-                        <asp:ListItem>-请选择-</asp:ListItem>
-                        <asp:ListItem>1987/01/01</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:Label ID="Label1" runat="server" Text=" 至 " Font-Size="Small"></asp:Label>
-                    <asp:DropDownList ID="DropDownList2" runat="server" AppendDataBoundItems="True" >
-                        <asp:ListItem>-请选择-</asp:ListItem>
-                        <asp:ListItem>1989/01/01</asp:ListItem>
-                    </asp:DropDownList>
+                <br /><br /><br />
+                <span>
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/info/InfoPage.aspx"
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
                 </span>
-                <span class="right-button">
-                    <asp:ImageButton ID="Tijao" runat="server" ImageUrl="~/App_Themes/images/student/Student_Tijiao.jpg" />
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    SelectCommand="SELECT DISTINCT [出生日期] FROM [学生情况]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                        ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                        SelectCommand="SELECT DISTINCT [出生日期] FROM [学生情况]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    
-                    SelectCommand="SELECT 学号, 姓名, 性别, 出生日期, 生源地 FROM 学生情况 WHERE (出生日期 BETWEEN ? AND ?) ORDER BY 出生日期">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="?" 
-                                PropertyName="SelectedValue" />
-                            <asp:ControlParameter ControlID="DropDownList2" Name="?" 
-                                PropertyName="SelectedValue" />
-                        </SelectParameters>
-                </asp:SqlDataSource>
-                </span>
-            </div>
+            </center>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                SelectCommand="SELECT [出生日期] FROM [学生情况 查询] ORDER BY [出生日期]">
+            </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                SelectCommand="SELECT [出生日期] FROM [学生情况 查询] ORDER BY [出生日期]">
+            </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                
+                SelectCommand="SELECT [学号], [姓名], [性别], [出生日期] FROM [学生情况 查询] WHERE (([出生日期] &gt;= ?) AND ([出生日期] &lt;= ?))">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="DropDownList1" Name="出生日期" 
+                        PropertyName="SelectedValue" Type="DateTime" />
+                    <asp:ControlParameter ControlID="DropDownList2" Name="出生日期2" 
+                        PropertyName="SelectedValue" Type="DateTime" />
+                </SelectParameters>
+            </asp:SqlDataSource>
         </div>
     </div>
     <div class="footer">
