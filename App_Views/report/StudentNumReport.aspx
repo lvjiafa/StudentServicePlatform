@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PersonReport2.aspx.cs" Inherits="App_Views_report_PersonReport2"  EnableEventValidation = "false" %>
 
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -65,36 +67,23 @@
     <center>
         <div class="p_h">
             <div class="all-center">
-                <span class="bt_q">
-                    <asp:ImageButton ID="bt_q" ImageUrl="~/App_Themes/images/report/ReportPage3_03.jpg"
-                            PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
-                </span>
-                 <span class="bt_f">
-                    <asp:ImageButton ID="bt_f" ImageUrl="~/App_Themes/images/report/ReportPage3_05.jpg"
-                             runat="server" Height="30px" Width="80px" 
-                    onclick="bt_f_Click1"/>
-                </span>
+                <center>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                </center>
+                <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" 
+                    Font-Size="8pt" InteractiveDeviceInfos="(集合)" WaitMessageFont-Names="Verdana" 
+                    WaitMessageFont-Size="14pt" Width="643px">
+                    <LocalReport ReportPath="rdlc\生源地.rdlc">
+                        <DataSources>
+                            <rsweb:ReportDataSource DataSourceId="AccessDataSource1" Name="DataSet1" />
+                        </DataSources>
+                    </LocalReport>
+                </rsweb:ReportViewer>
+                <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
+                    DataFile="~/App_Data/应用系统开发实例 教学管理系统.mdb" 
+                    SelectCommand="SELECT * FROM [生源地人数统计]"></asp:AccessDataSource>
                 <br />
                 <br /> 
-                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                    DataSourceID="SqlDataSource1">
-                    <Columns>
-                        <asp:BoundField DataField="生源地" HeaderText="生源地" 
-                            SortExpression="生源地" />
-                        <asp:BoundField DataField="人数" HeaderText="人数" SortExpression="人数" />
-                    </Columns>
-                </asp:GridView>
-                <br />
-                <br />
-                <br />
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    SelectCommand="SELECT * FROM [生源地人数统计]">
-                </asp:SqlDataSource>
-                <br />
-                <br />
-                <br />
                 <br />
                 <br />
                 <br />

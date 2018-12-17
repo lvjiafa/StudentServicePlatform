@@ -16,4 +16,8 @@ public partial class App_Views_report_PersonReport : System.Web.UI.Page
         Response.Redirect("~/App_Views/report/PersonReport2.aspx?姓名=" + TextBox2.Text + "&学号=" + TextBox1.Text);
        
     }
+    protected void TextBox1_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

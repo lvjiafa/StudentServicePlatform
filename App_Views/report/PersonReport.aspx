@@ -66,7 +66,8 @@
             <div class="gr_h">
                 <div class="center">
                     <span class="gr_number">
-                        你的学号：<asp:TextBox ID="TextBox1" runat="server" Height="30px"></asp:TextBox>
+                        你的学号：<asp:TextBox ID="TextBox1" runat="server" 
+                        Height="30px" ontextchanged="TextBox1_TextChanged"></asp:TextBox>
                     </span>
                     <span class="gr_name">
                         你的姓名：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>

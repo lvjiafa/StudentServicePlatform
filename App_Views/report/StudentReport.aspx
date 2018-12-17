@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentReport.aspx.cs" Inherits="App_Views_report_StudentReport" %>
 
+<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -58,29 +60,35 @@
                 <li>
                     <a href="" target="_blank">相关资料</a>
                 </li>
+                <li>
+                    <br />
+                </li>
+                <li>
+                    <br />
+                </li>
             </ul>
         </div>
         </div>
     </div>
     <center>
             <div class="gr_h">
-                <div class="center">
-                    <span class="gr_number">
-                        学生学号：<asp:TextBox ID="TextBox1" runat="server" Height="30px"></asp:TextBox>
-                    </span>
-                    <span class="gr_name">
-                        学生姓名：<asp:TextBox ID="TextBox2" runat="server" Height="30px"></asp:TextBox>
-                    </span>
-                    <span class="bt_b">
-                        <asp:ImageButton ID="back" ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" 
-                        PostBackUrl="~/App_Views/report/ReportPage.aspx" runat="server" Height="30px" Width="80px"/>
-                    </span>
-                    <span class="bt_s">
-                        <asp:ImageButton ID="sure" ImageUrl="~/App_Themes/images/report/ReportPage2_05.jpg"
-                         runat="server" 
-                        Height="30px" Width="80px" onclick="sure_Click"/>
-                    </span>
-                </div>
+                <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                <center>
+                    <rsweb:ReportViewer ID="ReportViewer1" runat="server" Font-Names="Verdana" 
+                        Font-Size="8pt" InteractiveDeviceInfos="(集合)" WaitMessageFont-Names="Verdana" 
+                        WaitMessageFont-Size="14pt" Width="986px">
+                        <localreport reportpath="rdlc\Report.rdlc">
+                            <datasources>
+                                <rsweb:ReportDataSource DataSourceId="AccessDataSource1" Name="DataSet" />
+                            </datasources>
+                        </localreport>
+                    </rsweb:ReportViewer>
+                    <asp:AccessDataSource ID="AccessDataSource1" runat="server" 
+                        DataFile="~/App_Data/应用系统开发实例 教学管理系统.mdb" 
+                        SelectCommand="SELECT [学号], [姓名], [性别], [出生日期], [生源地], [院系代号], [政治面貌], [是否住宿], [宿舍电话] FROM [学生情况]">
+                    </asp:AccessDataSource>
+                    <br />
+                </center>
             </div>
         </center>
     <div class="footer">
