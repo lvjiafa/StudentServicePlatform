@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="StudentNumReport.aspx.cs" Inherits="App_Views_report_StudentNumReport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PersonReport2.aspx.cs" Inherits="App_Views_report_PersonReport2"  EnableEventValidation = "false" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>生源人数报表</title>
+<head id="Head1" runat="server">
+    <title>生源地报表</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -71,8 +71,34 @@
                 </span>
                  <span class="bt_f">
                     <asp:ImageButton ID="bt_f" ImageUrl="~/App_Themes/images/report/ReportPage3_05.jpg"
-                            PostBackUrl="" runat="server" Height="30px" Width="80px"/>
+                             runat="server" Height="30px" Width="80px" 
+                    onclick="bt_f_Click1"/>
                 </span>
+                <br />
+                <br /> 
+                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
+                    DataSourceID="SqlDataSource1">
+                    <Columns>
+                        <asp:BoundField DataField="生源地" HeaderText="生源地" 
+                            SortExpression="生源地" />
+                        <asp:BoundField DataField="人数" HeaderText="人数" SortExpression="人数" />
+                    </Columns>
+                </asp:GridView>
+                <br />
+                <br />
+                <br />
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                    SelectCommand="SELECT * FROM [生源地人数统计]">
+                </asp:SqlDataSource>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </div>
         </div>
     </center>

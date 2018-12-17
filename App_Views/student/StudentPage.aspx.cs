@@ -11,4 +11,8 @@ public partial class App_Views_Student : System.Web.UI.Page
     {
 
     }
+    protected void back_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
 }

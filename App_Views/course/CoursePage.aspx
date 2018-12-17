@@ -68,18 +68,18 @@
                 <img src="../../App_Themes/images/index/Index_Wyu.jpg" alt="wyu"/>
             </div>
             <div class="center-left">
-                <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True"
-                    DataSourceID="SqlDataSource1" DataTextField="课程代号" DataValueField="课程代号" 
-                    onselectedindexchanged="DropDownList1_SelectedIndexChanged" 
-                    AutoPostBack="True">
-                    <asp:ListItem>-请选择-</asp:ListItem>
-                </asp:DropDownList>
-
+                <div class="left-info">
+                    <span>请选择课程代号：</span>
+                    <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True"
+                        DataSourceID="SqlDataSource1" DataTextField="课程代号" DataValueField="课程代号" 
+                        AutoPostBack="True" Width="200px" Height="30px">
+                        <asp:ListItem>-请选择-</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                     SelectCommand="SELECT [课程代号] FROM [课程档案]"></asp:SqlDataSource>
-
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
@@ -136,6 +136,7 @@
                 </asp:SqlDataSource>
             </div>
             <div class="center-right">
+            <div class="right-info">
                 <asp:FormView ID="FormView1" runat="server" DataKeyNames="课程代号" 
                     DataSourceID="SqlDataSource2" >
                     <EditItemTemplate>
@@ -162,6 +163,8 @@
                         <br />
                     </ItemTemplate>
                 </asp:FormView>
+                <br />
+                <br />
                 <br />
                 <asp:FormView ID="FormView2" runat="server" DataSourceID="SqlDataSource3">
                     <EditItemTemplate>
@@ -190,6 +193,8 @@
                     </ItemTemplate>
                 </asp:FormView>
                 <br />
+                <br />
+                <br />
                 <asp:FormView ID="FormView3" runat="server" DataSourceID="SqlDataSource4">
                     <EditItemTemplate>
                         类别:
@@ -216,6 +221,8 @@
 
                     </ItemTemplate>
                 </asp:FormView>
+                <br />
+                <br />
                 <br />
                 <asp:FormView ID="FormView4" runat="server" DataSourceID="SqlDataSource5">
                     <EditItemTemplate>
@@ -244,6 +251,8 @@
                     </ItemTemplate>
                 </asp:FormView>
                 <br />
+                <br />
+                <br />
                 <asp:FormView ID="FormView5" runat="server" DataSourceID="SqlDataSource6">
                     <EditItemTemplate>
                         学分:
@@ -271,6 +280,8 @@
                     </ItemTemplate>
                 </asp:FormView>
                 <br />
+                <br />
+                <br />
                 <asp:FormView ID="FormView6" runat="server" DataSourceID="SqlDataSource7">
                     <EditItemTemplate>
                         备注:
@@ -297,6 +308,7 @@
 
                     </ItemTemplate>
                 </asp:FormView>
+            </div>
             </div>
         </div>
     </div>

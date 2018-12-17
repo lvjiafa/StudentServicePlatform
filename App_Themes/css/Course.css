@@ -79,3 +79,15 @@
     position:relative;
     float:right;
     }
+.right-info
+{
+    position:absolute;
+    margin-left:50px;
+    margin-top:50px;
+    }
+.left-info
+{
+    position:absolute;
+    margin-left:20px;
+    margin-top:50px;
+    }

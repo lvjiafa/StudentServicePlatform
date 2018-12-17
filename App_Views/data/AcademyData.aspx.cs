@@ -9,6 +9,6 @@ public partial class App_Views_AcademyData : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        GridView1.Attributes.Add("style", "table-layout:fixed");
     }
 }

@@ -6,6 +6,7 @@
 <head runat="server">
     <title>成绩概况</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <div class="header">
@@ -60,7 +61,45 @@
         </div>
         </div>
     </div>
-    <div></div>
+    <div class="all-center">
+        <div>
+            <img src="../../App_Themes/images/index/Index_Wyu.jpg" alt="wyu"/>
+        </div>
+        <div class="center-lizi">
+            <img src="../../App_Themes/images/grade/GradePage_03.jpg" alt="Course Eaxmple"/>       
+        </div>
+        <div class="center-height">
+            <div class="font-stye">
+                <center>
+                    <br /><p>请选择你需要的类型</p><br /><br />
+                </center>
+            </div>
+            <div class="gr_r">
+                <a href="AvgGrade.aspx">
+                    <img src="../../App_Themes/images/grade/GradePage_06.jpg" alt="" />
+                    <span>平均成绩</span>
+                </a>
+            </div>
+            <div class="kc_r">
+                <a href="AvgGrade_department.aspx">
+                    <img src="../../App_Themes/images/grade/GradePage_08.jpg" alt=""/>
+                    <span>科目平均成绩</span>
+                </a>
+            </div>
+            <div class="xs_r">
+                <a href="ElectiveCourse.aspx">
+                    <img src="../../App_Themes/images/grade/GradePage_09.jpg" alt=""/>
+                    <span>选课成绩</span>
+                </a>
+            </div>
+            <div class="sy_r">
+                <a href="FailedObject.aspx">
+                    <img src="../../App_Themes/images/grade/GradePage_10.jpg" alt=""  />
+                    <span>不及格科目</span>
+                </a>
+            </div>   
+        </div>
+    </div>
     <div class="footer">
         <div class="all-center">
             <span>

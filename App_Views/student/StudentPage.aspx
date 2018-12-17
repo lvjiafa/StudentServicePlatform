@@ -118,7 +118,6 @@
                         姓名:
                         <asp:Label ID="姓名Label" runat="server" Text='<%# Bind("姓名") %>' />
                         <br />
-
                     </ItemTemplate>
                 </asp:FormView>
                 <br />
@@ -287,7 +286,7 @@
                 <br />
                 <asp:FormView ID="FormView9" runat="server" DataSourceID="SqlDataSource9">
                     <EditItemTemplate>
-                        照片:
+                        照片:<br />
                         <asp:TextBox ID="照片TextBox" runat="server" Text='<%# Bind("照片") %>' />
                         <br />
                         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" 
@@ -296,7 +295,7 @@
                             CausesValidation="False" CommandName="Cancel" Text="取消" />
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        照片:
+                        照片:<br />
                         <asp:TextBox ID="照片TextBox" runat="server" Text='<%# Bind("照片") %>' />
                         <br />
                         <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" 
@@ -306,7 +305,7 @@
                     </InsertItemTemplate>
                     <ItemTemplate>
                         照片:
-                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("照片") %>' Height="100px" Width="100px" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("照片") %>' Height="80px" Width="100px" />
                         <br />
 
                     </ItemTemplate>
@@ -410,7 +409,7 @@
                 <asp:SqlDataSource ID="SqlDataSource9" runat="server" 
                     ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                     ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    SelectCommand="SELECT [照片] FROM [学生情况 查询] WHERE (([学号] = ?) AND ([姓名] = ?))">
+                    SelectCommand="SELECT 照片 FROM [学生情况 查询] WHERE (学号 = ?) AND (姓名 = ?)">
                     <SelectParameters>
                         <asp:ControlParameter ControlID="TextBox1" Name="学号" PropertyName="Text" 
                             Type="String" />
@@ -421,6 +420,8 @@
                 </span>
              </div>
         </div>
+    </div>
+    <div>
     </div>
     <div class="footer">
         <div class="all-center">

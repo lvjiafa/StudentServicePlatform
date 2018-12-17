@@ -96,7 +96,7 @@
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
                 AllowSorting="True" AutoGenerateColumns="false" CellPadding="4" 
                 DataKeyNames="教师编号" DataSourceID="SqlDataSource1" ForeColor="#333333" 
-                GridLines="None" Width="548px" Font-Size="Large">
+                GridLines="None" Width="720px" Font-Size="Large">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -118,6 +118,10 @@
                 <SortedDescendingHeaderStyle BackColor="#820000" />
             </asp:GridView>
             <br />
+            <span>
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/data/DataPage.aspx" 
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
         </center>
         </div>
     </div>

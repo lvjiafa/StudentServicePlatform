@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>课程档案</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Data.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -99,7 +99,7 @@
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
                 AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
                 DataKeyNames="课程代号" DataSourceID="SqlDataSource1" ForeColor="#333333" 
-                GridLines="None" Width="548px" Font-Size="Large">
+                GridLines="None" Width="720px" Font-Size="Large">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
@@ -111,7 +111,7 @@
                     <asp:BoundField DataField="学分" HeaderText="学分" SortExpression="学分" />
                     <asp:BoundField DataField="备注" HeaderText="备注" SortExpression="备注" />
                 </Columns>
-                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White"/>
                 <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                 <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
                 <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
@@ -122,6 +122,10 @@
                 <SortedDescendingHeaderStyle BackColor="#820000" />
             </asp:GridView>
             <br />
+            <span>
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/data/DataPage.aspx" 
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
         </center>
         </div>
     </div>

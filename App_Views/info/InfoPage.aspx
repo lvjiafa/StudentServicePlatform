@@ -6,6 +6,7 @@
 <head runat="server">
     <title>信息统计</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Report.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <div class="header">
@@ -60,7 +61,45 @@
         </div>
         </div>
     </div>
-    <div></div>
+    <div class="all-center">
+        <div>
+            <img src="../../App_Themes/images/index/Index_Wyu.jpg" alt="wyu"/>
+        </div>
+        <div class="center-lizi">
+            <img src="../../App_Themes/images/info/InfoPage_03.jpg" alt="Course Eaxmple"/>       
+        </div>
+        <div class="center-height">
+            <div class="font-stye">
+                <center>
+                    <br /><p>请选择统计类型</p><br /><br />
+                </center>
+            </div>
+            <div class="gr_r">
+                <a href="BirthInTime.aspx">
+                    <img src="../../App_Themes/images/info/InfoPage_06.jpg" alt="" />
+                    <span>出生日期</span>
+                </a>
+            </div>
+            <div class="kc_r">
+                <a href="BirthPlaceDistribute.aspx">
+                    <img src="../../App_Themes/images/info/InfoPage_08.jpg" alt=""/>
+                    <span>生源地人数比例</span>
+                </a>
+            </div>
+            <div class="xs_r">
+                <a href="BirthPlaceStatistics.aspx">
+                    <img src="../../App_Themes/images/info/InfoPage_09.jpg" alt=""/>
+                    <span>生源地人数</span>
+                </a>
+            </div>
+            <div class="sy_r">
+                <a href="SexStatistics.aspx">
+                    <img src="../../App_Themes/images/info/InfoPage_10.jpg" alt=""  />
+                    <span>学院性别</span>
+                </a>
+            </div>   
+        </div>
+    </div>
     <div class="footer">
         <div class="all-center">
             <span>

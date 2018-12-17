@@ -62,6 +62,7 @@
         </div>
         </div>
     </div>
+    <center>
     <div class="center">
         <div class="all-center">
             <br />
@@ -88,7 +89,21 @@
                 ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                 ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                 
-                SelectCommand="SELECT 系别.院系名称, 学生情况.学号, 学生情况.姓名, 学生情况.性别, 课程档案.课程名称, 课程档案.类别, 课程档案.考核方式, [选课及成绩 查询].修课时间, 课程档案.学分, [选课及成绩 查询].成绩 FROM ((([选课及成绩 查询] INNER JOIN 学生情况 ON [选课及成绩 查询].学号 = 学生情况.学号) INNER JOIN 课程档案 ON [选课及成绩 查询].课程代号 = 课程档案.课程代号) INNER JOIN 系别 ON 学生情况.院系代号 = 系别.院系代号)"></asp:SqlDataSource>
+                SelectCommand="SELECT 系别.院系名称, 学生情况.学号, 学生情况.姓名, 学生情况.性别, 课程档案.课程名称, 课程档案.类别, 课程档案.考核方式, [选课及成绩 查询].修课时间, 课程档案.学分, [选课及成绩 查询].成绩 FROM ((([选课及成绩 查询] INNER JOIN 学生情况 ON [选课及成绩 查询].学号 = 学生情况.学号) INNER JOIN 课程档案 ON [选课及成绩 查询].课程代号 = 课程档案.课程代号) INNER JOIN 系别 ON 学生情况.院系代号 = 系别.院系代号)">
+            </asp:SqlDataSource><br /><br />
+            <span class="i-center">
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/grade/GradePage.aspx"
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
+        </div>
+    </div>
+    </center>
+    <div class="footer">
+        <div class="all-center">
+            <span>
+            </span>
+            <span>
+            </span>
         </div>
     </div>
     </form>

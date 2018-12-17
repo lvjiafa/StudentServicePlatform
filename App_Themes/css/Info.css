@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.i-left
+{
+    position:absolute;
+    float:left;
+    margin-top:50px;
+    margin-left:300px;
+    }
+.i-right
+{
+    position:absolute;
+    float:right;
+    margin-left:800px;
+    }
+.i-center
+{
+    position:absolute;
+    float:left;
+    margin-top:400px;
+    margin-left:600px;
+    }

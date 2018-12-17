@@ -132,5 +132,12 @@
 /*教师档案页面*/
 .t-center
 {
+    position:relative;
     height:550px;
     }
+ /*学院档案界面*/
+ .b-back
+ {
+     position:absolute;
+     margin-top:400px;
+     }

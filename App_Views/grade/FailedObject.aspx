@@ -7,10 +7,11 @@
     <title>不及格科目查询</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Student.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Grade.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <div class="header">
+        <div class="header">
         <div class="header-top">
             <div class="all-center">
                 <div class="header-top-left">
@@ -60,12 +61,18 @@
                 </li>
             </ul>
             </div>
-        </div>       
-        <div class="center">
+        </div>
+    </div>
+        <div class="center">       
             <div class="all-center">
-                <div class="center-left">
+                <center>
+                    <br /><br /><br />
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" AppendDataBoundItems="true"
+                        DataSourceID="SqlDataSource1" DataTextField="课程名称" DataValueField="课程名称">
+                    </asp:DropDownList>
+                    <br /><br /><br />
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
-                        DataSourceID="SqlDataSource1">
+                        DataSourceID="SqlDataSource2">
                         <Columns>
                             <asp:BoundField DataField="院系名称" HeaderText="院系名称" SortExpression="院系名称" />
                             <asp:BoundField DataField="学号" HeaderText="学号" SortExpression="学号" />
@@ -74,7 +81,16 @@
                             <asp:BoundField DataField="成绩" HeaderText="成绩" SortExpression="成绩" />
                         </Columns>
                     </asp:GridView>
+                    <br /><br /><br />
+                    <span>
+                    <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/grade/GradePage.aspx"
+                        ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+                    </span>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                        ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                        SelectCommand="SELECT [课程名称] FROM [各院系不及格课程名单]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                         ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                         ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                         SelectCommand="SELECT * FROM [各院系不及格课程名单] WHERE ([课程名称] = ?)">
@@ -83,22 +99,17 @@
                                 PropertyName="SelectedValue" Type="String" />
                         </SelectParameters>
                     </asp:SqlDataSource>
-                </div>
-                <div class="center-right">
-                    <span class="right-header">
-                        请先选择课程信息
-                    </span>
-                    <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="true" AutoPostBack="true"
-                        DataSourceID="SqlDataSource2" DataTextField="课程名称" DataValueField="课程名称">
-                        <asp:ListItem>-请选择-</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                        ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                        ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                        SelectCommand="SELECT DISTINCT [课程名称] FROM [各院系不及格课程名单]"></asp:SqlDataSource>
-                </div>
+                </center>
             </div>
-    </div>
+        </div>
+        <div class="footer">
+            <div class="all-center">
+                <span>
+                </span>
+                <span>
+                </span>
+            </div>
+        </div>
     </form>
 </body>
 </html>

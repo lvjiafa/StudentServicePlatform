@@ -54,7 +54,8 @@
 .student-info
 {
     position:absolute;
+    padding:0;
     margin-left:40px;
-    top: 5px;
+    top: 0px;
     left: 0px;
 }

@@ -6,7 +6,8 @@
 <head id="Head1" runat="server">
     <title>各系按科目平均成绩</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
-    <link href="../../App_Themes/css/Student.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Data.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Info.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -63,48 +64,58 @@
         </div>
 
     </div>
-    <div class="center">
+    <div class="t-center">
+    <br /><br />
+        <div class="i-left">
+            <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource2" 
+                EnableViewState="True" RightToLeft="Yes" Width="720px" Height="350px" 
+                IsMapEnabled="False">
+                <Series>
+                    <asp:Series Name="Series1" XValueMember="课程名称" YValueMembers="平均成绩" 
+                        YValuesPerPoint="4">
+                    </asp:Series>
+                </Series>
+                <ChartAreas>
+                    <asp:ChartArea Name="ChartArea1">
+                        <AxisX IntervalAutoMode="VariableCount" IsLabelAutoFit="False">
+                            <LabelStyle Angle="90" />
+                        </AxisX>
+                    </asp:ChartArea>
+                </ChartAreas>
+            </asp:Chart>
+        </div>
+        <div class="i-right">
+            <span>请选择院系：</span><br />
+            <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
+                DataSourceID="SqlDataSource1" DataTextField="院系名称" DataValueField="院系名称">
+            </asp:DropDownList>
+        </div>
+            <span class="i-center">
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/grade/GradePage.aspx"
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                SelectCommand="SELECT DISTINCT 院系名称 FROM 各院系按课程的平均成绩查询">
+            </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
+                
+            SelectCommand="SELECT [课程名称], [平均成绩] FROM [各院系按课程的平均成绩查询] WHERE ([院系名称] = ?)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="DropDownList1" Name="院系名称" 
+                            PropertyName="SelectedValue" Type="String" />
+                    </SelectParameters>
+            </asp:SqlDataSource>
+    </div>
+    <div class="footer">
         <div class="all-center">
-            <div class="center-left">
-                <div class="student-info">
-                    <br />
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
-                        AutoGenerateColumns="False" DataSourceID="SqlDataSource2">
-                        <Columns>
-                            <asp:BoundField DataField="课程名称" HeaderText="课程名称" SortExpression="课程名称" />
-                            <asp:BoundField DataField="平均成绩" HeaderText="平均成绩" ReadOnly="True" 
-                                SortExpression="平均成绩" />
-                        </Columns>
-                    </asp:GridView>
-                </div>
-            </div>
-            <div class="center-right">
-                <span class="right-header">
-                    请先选择院系信息
-                </span>
-                <span class="right-nuber">
-                    院系名称：
-                    <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="True"
-                    DataSourceID="SqlDataSource1" DataTextField="院系名称" DataValueField="院系名称" 
-                    AutoPostBack="True">
-                        <asp:ListItem>-请选择-</asp:ListItem>
-                    </asp:DropDownList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    SelectCommand="SELECT DISTINCT [院系名称] FROM [各院系按课程的平均成绩查询]"></asp:SqlDataSource>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
-                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
-                    ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
-                    SelectCommand="SELECT [课程名称], [平均成绩] FROM [各院系按课程的平均成绩查询] WHERE ([院系名称] = ?)">
-                        <SelectParameters>
-                            <asp:ControlParameter ControlID="DropDownList1" Name="院系名称" 
-                                PropertyName="SelectedValue" Type="String" />
-                        </SelectParameters>
-                </asp:SqlDataSource>
-                </span>  
-
-            </div>
+            <span>
+            </span>
+            <span>
+            </span>
         </div>
     </div>
     </form>

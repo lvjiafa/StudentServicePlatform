@@ -6,7 +6,7 @@
 <head id="Head1" runat="server">
     <title>生源地人数统计</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
-    <link href="../../App_Themes/css/Xuanke.css" type="text/css" rel="Stylesheet"/>
+    <link href="../../App_Themes/css/Data.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -62,8 +62,9 @@
         </div>
         </div>
     </div>
-    <div class="center">
-        <div class="all-center">
+    <center>
+        <div class="t-center">
+        <br />
             <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1" 
                 EnableViewState="True">
                 <Series>
@@ -76,13 +77,28 @@
                     </asp:ChartArea>
                 </ChartAreas>
             </asp:Chart>
+            <br />
+            <br />
+            <span>
+            <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/info/InfoPage.aspx"
+                ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
+        </center>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
                 ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" 
                 SelectCommand="SELECT * FROM [生源地人数统计]"></asp:SqlDataSource>
         </div>
-    </div>
+    </center>
     </form>
+    <div class="footer">
+        <div class="all-center">
+            <span>
+            </span>
+            <span>
+            </span>
+        </div>
+    </div>
 </body>
 </html>
 

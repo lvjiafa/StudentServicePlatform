@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>学生档案</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Data.css" rel="Stylesheet" type="text/css" />
 </head>
@@ -105,12 +105,12 @@
             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
                 AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
                 DataKeyNames="学号" DataSourceID="SqlDataSource1" ForeColor="#333333" 
-                GridLines="None" Width="917px" Font-Size="Large" Height="350px">
+                GridLines="None"  Font-Size="Large" Height="350px">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="学号" HeaderText="学号" ReadOnly="True"
-                        SortExpression="学号" />
+                        SortExpression="学号"/>
                     <asp:BoundField DataField="姓名" HeaderText="姓名" SortExpression="姓名" />
                     <asp:BoundField DataField="性别" HeaderText="性别" SortExpression="性别" />
                     <asp:BoundField DataField="出生日期" HeaderText="出生日期" SortExpression="出生日期" />
@@ -121,9 +121,10 @@
                     <asp:BoundField DataField="宿舍电话" HeaderText="宿舍电话" SortExpression="宿舍电话" />
                 </Columns>
                 <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" 
+                    Wrap="False" />
                 <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
+                <RowStyle BackColor="#FFFBD6" ForeColor="#333333" Wrap="False" />
                 <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
                 <SortedAscendingCellStyle BackColor="#FDF5AC" />
                 <SortedAscendingHeaderStyle BackColor="#4D0000" />
@@ -131,6 +132,10 @@
                 <SortedDescendingHeaderStyle BackColor="#820000" />
             </asp:GridView>
             <br />
+            <span>
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/data/DataPage.aspx" 
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
         </center>
         </div>
     </div>

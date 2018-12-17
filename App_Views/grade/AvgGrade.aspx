@@ -7,6 +7,7 @@
     <title>各科目平均成绩</title>
     <link href="../../App_Themes/css/IndexStyle.css" rel="Stylesheet" type="text/css" />
     <link href="../../App_Themes/css/Student.css" rel="Stylesheet" type="text/css" />
+    <link href="../../App_Themes/css/Grade.css" rel="Stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -155,6 +156,18 @@
                 </asp:SqlDataSource>
                 </span>
             </div>
+            <span class="g-back">
+                <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/grade/GradePage.aspx"
+                    ImageUrl="~/App_Themes/images/report/ReportPage2_03.jpg" Height="30px" />
+            </span>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="all-center">
+            <span>
+            </span>
+            <span>
+            </span>
         </div>
     </div>
     </form>
