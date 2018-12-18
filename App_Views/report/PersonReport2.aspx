@@ -86,22 +86,15 @@
                     </SelectParameters>
                 </asp:AccessDataSource>
                 <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
             </div>
         </div>
+        <span>
+            <asp:ImageButton ID="back" runat="server" PostBackUrl="~/App_Views/report/ReportPage.aspx"
+                ImageUrl="~/App_Themes/images/report/ReportPage3_03.jpg" Height="30px" />
+        </span>
+        <br />
+        <br />
+        <br />
     </center>
     <div class="footer">
         <div class="all-center">
